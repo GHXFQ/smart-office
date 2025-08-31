@@ -1,0 +1,39 @@
+# Django设置
+django:
+  secret_key: "your-secret-key-here"
+  debug: true
+  allowed_hosts:
+    - localhost
+    - 127.0.0.1
+
+# 数据库设置
+database:
+  name: "office"
+  user: "root"
+  password: "root123456"
+  host: "localhost"
+  port: 3306
+
+# CORS设置
+cors:
+  allowed_origins:
+    - "http://localhost:8080"
+    - "http://127.0.0.1:8080"
+
+# AI设置
+ai:
+  openai_api_key: "sk-7nKZAeQ2PwLp9G4MiuNTMhOqIQ1qyOvq3hQEIsYCKafMdjW4"
+  openai_api_base: "https://api.agicto.cn/v1"
+  model: "Doubao-lite-128k"
+  # 视觉模型配置
+  vision_model: "Doubao-Seed-1.6-thinking"  # 支持图像识别的模型
+  enable_vision_api: true               # 启用视觉API
+  max_vision_tokens: 12000              # 视觉API返回的最大token数
+  vision_api_timeout: 60                # 视觉API超时时间(秒)
+
+# 日志设置
+logging:
+  level: "DEBUG"
+  file: "logs/django.log"
+  max_size: 10  # MB
+  backup_count: 5 
